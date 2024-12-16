@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-white to-gray-50">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
@@ -19,7 +22,7 @@ export const Hero = () => {
           <div className="space-x-4">
             <Button
               className="animate-fade-up [animation-delay:200ms] group bg-primary hover:bg-primary/90 text-white px-8 py-6 rounded-full transition-all duration-300 transform hover:scale-105"
-              onClick={() => console.log("Start chat")}
+              onClick={() => navigate("/chat")}
             >
               Start Chatting
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
