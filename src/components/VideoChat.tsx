@@ -45,15 +45,15 @@ export const VideoChat = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="relative">
+    <div className="flex w-1/3">
+      <div className="space-y-4">
+        <div className="relative h-[calc(50vh-4rem)]">
           <video
             ref={localVideoRef}
             autoPlay
             playsInline
             muted
-            className="w-full aspect-video bg-gray-900 rounded-lg"
+            className="w-full h-full object-cover bg-gray-900 rounded-lg"
           />
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
             {!isStarted ? (
@@ -75,12 +75,12 @@ export const VideoChat = () => {
             )}
           </div>
         </div>
-        <div className="relative">
+        <div className="relative h-[calc(50vh-4rem)]">
           <video
             ref={remoteVideoRef}
             autoPlay
             playsInline
-            className="w-full aspect-video bg-gray-900 rounded-lg"
+            className="w-full h-full object-cover bg-gray-900 rounded-lg"
           />
         </div>
       </div>
